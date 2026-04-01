@@ -1,0 +1,36 @@
+I. Hệ thống Truyền động (Drivetrain)
+    - Motor: 2x DC Worm Gear JGY370 12V 
+        + Tốc độ: 210RPM (không tải), 160RPM (có tải) 
+        + Moment xoắn: 1.7kg.cm (định mức), 6.4kg.cm (Stall)
+        + Dòng điện: 0.09A (không tải), 0.3A (tải), 1.6A (Stall) 
+    - Driver: 2x BTS7960 
+    - Bánh xe: 2x Bánh xe V2 65mm, trục 6mm 
+    - Đặc điểm: Động cơ trục vít có khả năng tự hãm tốt, momen xoắn lớn phù hợp đẩy kéo 
+
+II. Hệ thống Năng lượng & Điều khiển (Power & Control)
+    - Vi điều khiển: Arduino Uno R3 (Flash 32kb, RAM 2kb) 
+    - Pin: 3x 18650 (Pin 3S ~11.1V) 
+        + Cấp nguồn trực tiếp cho động cơ [cite: 1, 5]
+        + Qua Buck LM2596 hạ xuống 7V cấp vào chân VIN Arduino 
+    - Bảo vệ:
+        + Cầu chì 5A (Tổng dòng hệ thống ~2.1A) 
+        + Diode 3A 1000V 
+        + Công tắc bập bênh KCD1 6A 
+    - Lưu ý: KHÔNG có mạch BMS bảo vệ pin 
+
+III. Hệ thống Cảm biến (Sensing)
+    - Cảm biến đường biên (IR): 4x TCRT5000 
+        + Vị trí: Trước trái/phải, Sau trái/phải 
+        + Cài đặt: Ngang, cố định bằng xốp/bìa 
+        + Ngưỡng: Trắng < 29, Đen > 35, Bị ủi lên > 100 
+    - Cảm biến vật cản (US): 4x RCWL-1601 
+        + Góc đặt: 0°, -20°, +20°, 180° 
+        + Hướng: Đặt cao, hướng xuống để phát hiện đối thủ có phần ủi nghiêng
+        + Cải tiến: Thêm vách ngăn giữa các cảm biến để giảm nhiễu chéo
+IV. Cấu trúc Cơ khí (Mechanical Structure)
+    - Kích thước: 15cm x 15cm (Tuân thủ luật)
+    - Trọng lượng: ≤ 1.5kg 
+    - Vật liệu: 
+        + Phần ủi: Nhôm mỏng
+        + Khung: Nhựa PVC dày 2mm
+    - Trọng tâm: Cần tập trung ở phần ủi phía trước dưới

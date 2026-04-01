@@ -1,0 +1,31 @@
+I. Quy định thi đấu (Tournament Rules)
+    - Sàn đấu: Hình tròn đường kính 100cm, viền trắng 5cm 
+    - Khởi động: Hai vạch cách nhau 20cm 
+    - Trạng thái: Tự động hoàn toàn, KHÔNG giao tiếp không dây 
+    - Bắt đầu: Bắt buộc delay 3 giây trước khi di chuyển 
+    - Điều kiện thắng: Đẩy đối thủ ra ngoài hoặc làm lật đối thủ 
+
+II. Phân tích đối thủ (Opponent Intelligence)
+    - Đặc điểm phổ biến: 
+        + Tốc độ chậm (20-30cm/s), xoay chậm 
+        + Trọng tâm cao, dồn về phía trước, lực đẩy lớn (Tanker type)
+        + Thường chỉ tấn công trực diện hoặc góc chéo trước 
+    - Thiết bị: Cảm biến siêu âm (HC-SR04, SRF05...), hồng ngoại LM393 
+    - Điểm yếu: 
+        + Khả năng cơ động kém 
+        + Có thể bị đánh lừa bởi vật thể giả (cờ/flags) 
+
+III. Logic vận hành & Hiệu chỉnh (Logic & Calibration)
+    - Khắc phục lỗi phần cứng: 
+        + Do đấu nối nhầm: Xoay phải = Tiến, Xoay trái = Lùi 
+        + Lùi = Xoay trái, Tiến = Xoay phải 
+    - Khoảng cách: Hiệu chỉnh sai số US (Trước +3.5cm, Trái/Phải +1cm) 
+    - Chống nhiễu: Không dùng bộ lọc Kalman (do thiếu chính xác trong môi trường này) [cite: 11]
+    - Câu hỏi chiến thuật: 
+        + Có nên dùng gia tốc để tránh trượt bánh? 
+        + Phương án ủi và nâng đối thủ lên để triệt tiêu lực ma sát của chúng 
+
+IV. Kế hoạch triển khai (Roadmap)
+    - Giai đoạn 1: Debug cảm biến, xác định vị trí đặt tối ưu, thử nghiệm vách ngăn US 
+    - Giai đoạn 2: Cắt vật liệu PVC/Nhôm theo tỉ lệ chuẩn, lắp ráp khung tạm thời
+    - Giai đoạn 3: Cố định linh kiện, kiểm tra khả năng chịu lực ngang (2-3kg) và độ rung khi phanh gấp 
