@@ -47,5 +47,9 @@ Do bị "mù" ranh giới sàn đấu, bot buộc phải chơi theo thiên hư�
 * Arduino Uno R3 với giới hạn 32KB Flash và 2KB RAM  đôi khi gây thắt cổ chai khi xử lý nhiều tín hiệu ngắt (interrupt) từ cảm biến. Chuyển sang lập trình hệ thống trên vi điều khiển STM32 sẽ là bước nhảy vọt về tốc độ xử lý đa luồng.
 * Trang bị lại cảm biến quang/IR chất lượng cao hơn để tối ưu hóa khả năng bám sàn.
 
+## Lưu ý
+
+* Nếu copy paste code thì cần chỉnh sửa lại thông số và debug lại các giá trị const
+* File nếu không có IR được chỉnh sửa ngay ở thực chiến -> có thể sẽ có logic tốt hơn bản kia một chút
 ---
 *Dự án được phân phối dưới giấy phép MIT License.*
