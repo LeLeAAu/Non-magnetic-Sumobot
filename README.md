@@ -5,6 +5,11 @@ Một dự án robot tự động hoàn toàn tham gia thi đấu Sumo, được
 ## Thực chiến
 
 // Do viết file này sau khi thực chiễn đã lâu và không có thói quen chụp ảnh -> không có ảnh và video thực tế.
+// Còn giữ đúng cái file meme này
+
+
+https://github.com/user-attachments/assets/25ba5a70-891f-4cdf-a935-8837fe36bc16
+
 
 ## Bối cảnh & Luật thi đấu
 
